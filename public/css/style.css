@@ -1,0 +1,9 @@
+div.container {
+    position:absolute;
+    left:50%;
+    top:50%;
+}
+.container form, .container form button {
+    font-size: 25px;
+}
+
