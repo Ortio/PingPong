@@ -18,7 +18,6 @@ class PingPongController extends AbstractController
 
     /**
      * @return Response
-     * @Route ("/", name="home",  methods={"GET","HEAD"})
      */
     public function indexAction(): Response
     {
@@ -27,9 +26,8 @@ class PingPongController extends AbstractController
 
     /**
      * @return JsonResponse
-     * @Route ("/",  methods={"POST"})
      */
-    public function pongAction(EntityManagerInterface $entityManager): JsonResponse
+    public function pingAction(EntityManagerInterface $entityManager): JsonResponse
     {
         $log = new Log();
         $log->setDate(new DateTime());
@@ -37,7 +35,5 @@ class PingPongController extends AbstractController
         $entityManager->flush();
         return $this->json('Pong');
     }
-
-
 
 }
