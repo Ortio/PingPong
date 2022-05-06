@@ -6,3 +6,10 @@ api:
     methods: post
     path: /api/ping
     controller: App\Controller\PingPongController::pingAction
+
+any:
+    methods: post
+    path: /{req}
+    controller: App\Controller\PingPongController::notFoundAction
+    requirements:
+        req: ".+"

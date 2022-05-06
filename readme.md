@@ -18,5 +18,9 @@ make ssh
 php bin/console doctrine:migrations:migrate --all-or-nothing=0
 ```
 5. Переходим в браузере на страницу [http://localhost](http://localhost).
+6. Чтобы протестировать метод ping можно из шторма(стандартными ) или из контейнера командой
+```bash
+./vendor/bin/phpunit ./tests/Functional/PingPongTest.php
+```
 
 Репозиторий был взят [тут](https://github.com/systemsdk/docker-nginx-php-symfony).
